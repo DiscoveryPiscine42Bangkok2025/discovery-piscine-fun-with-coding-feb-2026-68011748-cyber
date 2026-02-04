@@ -1,0 +1,49 @@
+.menu {
+    position: relative;
+    width: 200px;
+}
+
+/* ซ่อน checkbox */
+#toggle {
+    display: none;
+}
+
+/* ปุ่ม */
+.menu-button {
+    display: block;
+    padding: 12px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* dropdown */
+.menu-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: white;
+    border: 1px solid #ccc;
+
+    display: none;
+}
+
+/* ⭐ หัวใจของ click dropdown */
+#toggle:checked + .menu-button + .menu-list {
+    display: block;
+}
+
+/* ตกแต่ง li */
+.menu-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-list li:hover {
+    background: #f5f5f5;
+}

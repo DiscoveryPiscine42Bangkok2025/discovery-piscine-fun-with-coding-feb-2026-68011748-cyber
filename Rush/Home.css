@@ -161,6 +161,10 @@ body {
         margin-bottom: 25px;
     }
 
+    .card-wrapper {
+        margin-bottom: 20px;
+    }
+
     .card-section {
         grid-template-columns: 1fr;
     }

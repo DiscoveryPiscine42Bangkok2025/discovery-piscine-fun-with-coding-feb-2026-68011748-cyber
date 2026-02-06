@@ -1,0 +1,111 @@
+/* =====================================================
+   BASE.CSS
+   - Reset
+   - Global styles
+   - Navbar
+   - Footer
+===================================================== */
+/* =========================
+   BASE RESET & GLOBAL STYLE
+   ========================= */
+/* ---------- RESET ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #ffd65a, #ff9f43);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    background: linear-gradient(90deg, #ffd65a, #ff9f43);
+    padding: 50px 20px;
+}
+
+.footer-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.footer-column a {
+    display: block;
+    margin: 12px 0;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE (FOOTER)
+   ========================= */
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-title {
+        font-size: 28px;
+    }
+}

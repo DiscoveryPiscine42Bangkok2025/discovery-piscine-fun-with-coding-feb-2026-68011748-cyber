@@ -1,0 +1,169 @@
+/* =====================================================
+   RESUME.CSS
+   - Resume layout
+   - About me
+   - Activities
+===================================================== */
+
+/* ================= RESET ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= BASE ================= */
+body {
+    font-family: 'Sarabun', 'Roboto', sans-serif;
+    background: #f6f6f6;
+    color: #000;
+    line-height: 1.6;
+    padding-top: 90px; /* เว้น navbar */
+}
+
+/* ================= SECTION ================= */
+section {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ================= TITLE ================= */
+.card h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+/* =================================================
+   ABOUT ME
+   ================================================= */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-img {
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.profile-info {
+    max-width: 520px;
+}
+
+.profile-info p {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.profile-info strong {
+    font-weight: 800;
+}
+
+/* =================================================
+   ACTIVITIES / ACHIEVEMENTS (LAYOUT แบบรูป)
+   ================================================= */
+.activity-item {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* ซ้ายข้อความ / ขวารูป */
+    gap: 40px;
+    align-items: start;
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* ถ้ามีรูปเดียวในแถวสุดท้าย ให้กิน 2 คอลัมน์และอยู่กลาง */
+.activity-imgs img:only-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+/* ---------- TEXT (ซ้าย) ---------- */
+.activity-text {
+    text-align: left;
+}
+
+.activity-text h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.activity-text p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* ---------- IMAGE GRID (ขวา) ---------- */
+.activity-imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: end;
+}
+
+.activity-imgs img {
+    width: 100%;
+    max-width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* =================================================
+   RESPONSIVE
+   ================================================= */
+@media (max-width: 900px) {
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .activity-item {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-imgs {
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .card {
+        padding: 30px;
+    }
+
+    .card h2 {
+        font-size: 28px;
+    }
+
+    .activity-imgs {
+        grid-template-columns: 1fr;
+    }
+}

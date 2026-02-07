@@ -28,6 +28,14 @@ section {
     padding: 0 20px;
 }
 
+/* ทำให้ card ของ About Me แคบกว่าปกติ */
+.card:first-of-type {
+    max-width: 900px;          /* ลดความกว้างพื้นที่สีขาว */
+    margin: 60px auto;         /* จัดให้อยู่กึ่งกลาง */
+    padding: 40px 60px;        /* ลดพื้นที่ขอบซ้าย-ขวา */
+}
+
+
 /* ================= CARD ================= */
 .card {
     background: #fff;
@@ -86,12 +94,6 @@ section {
     border-bottom: 1px solid #eee;
 }
 
-/* ถ้ามีรูปเดียวในแถวสุดท้าย ให้กิน 2 คอลัมน์และอยู่กลาง */
-.activity-imgs img:only-child {
-    grid-column: 1 / -1;
-    justify-self: center;
-}
-
 .activity-item:last-child {
     border-bottom: none;
 }
@@ -127,6 +129,12 @@ section {
     object-fit: cover;
     border-radius: 16px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ถ้ามีรูปเดียวในแถวสุดท้าย ให้กิน 2 คอลัมน์และอยู่กลาง */
+.activity-imgs img:only-child {
+    grid-column: 1 / -1;
+    justify-self: center;
 }
 
 /* =================================================
